@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROMPT="Video Output"
+PROMPT="Select a Video Output Option: "
 OPTIONS="Extend to the right|Extend to the left|Mirror Screen|Only notebook"
 
 MENU=$( rofi_dmenu.sh "$PROMPT" "$OPTIONS" )

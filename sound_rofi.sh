@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROMPT="Audio Card"
+PROMPT="Select the Audio Card: "
 
 CARDS="$( pacmd list-cards | \
 sed -n '/profiles/,/active profile/{/profiles:/b;/active profile/b;p}' | \
