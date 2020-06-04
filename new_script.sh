@@ -1,7 +1,15 @@
 #!/bin/bash
 
-while [ "$1" != "" ]; do 
-    echo "#!/bin/bash" > ~/Scripts/$1
-    chmod +x ~/Scripts/$1
+folder="/home/lechenco/bin/"
+
+while [ "$1" != "" ]; do
+    fullpath=$folder$1
+    if test -f "$fullpath" ; then
+        echo "This file already exist"
+    else
+        echo $fullpath
+        echo "#!/bin/bash" > "$fullpath"
+        chmod +x "$fullpath"
+    fi 
     shift
 done
