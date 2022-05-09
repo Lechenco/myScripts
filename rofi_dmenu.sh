@@ -9,9 +9,9 @@ if [ $N_LINES -gt 6 ]; then { N_LINES=6; } fi
 
 if [ "$MESSAGE" != "" ]
 then {
-    MENU=$( rofi -sep "|" -theme slate -lines $N_LINES -dmenu -i -p "$PROMPT" -mesg "$MESSAGE" <<< $OPTIONS )
+    MENU=$( rofi -sep "|" -lines $N_LINES -dmenu -i -p "$PROMPT" -mesg "$MESSAGE" <<< $OPTIONS )
 } else {
-    MENU=$( rofi -sep "|" -theme slate -lines $N_LINES -dmenu -i -p "$PROMPT" <<< $OPTIONS )
+    MENU=$( rofi -sep "|" -lines $N_LINES -dmenu -i -p "$PROMPT" <<< $OPTIONS )
 } 
 fi
 
