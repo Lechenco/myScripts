@@ -1,13 +1,13 @@
 #!/bin/bash
 
-folder="/home/lechenco/bin/"
+folder=$(dirname "$0")
 
 while [ "$1" != "" ]; do
-    fullpath=$folder$1
+    fullpath="$folder/$1"
     if test -f "$fullpath" ; then
         echo "This file already exist"
     else
-        echo $fullpath
+        echo "Adding script file $fullpath"
         echo "#!/bin/bash" > "$fullpath"
         chmod +x "$fullpath"
     fi 
